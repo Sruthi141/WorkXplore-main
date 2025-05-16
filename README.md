@@ -57,7 +57,6 @@ Ensure you have the following installed on your system:
    cd ../backend
    npm install
    ```
-
 3. Set up environment variables:
    - Create a `.env` file in the `backend` directory.
    - Add the necessary environment variables (e.g., database URI, JWT secret, etc.).
@@ -71,7 +70,7 @@ Ensure you have the following installed on your system:
    - Backend:
      ```bash
      cd backend
-    node app.js
+     node app.js
      ```
 
 5. Open the application:
