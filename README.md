@@ -71,7 +71,7 @@ Ensure you have the following installed on your system:
    - Backend:
      ```bash
      cd backend
-     npm start
+    node app.js
      ```
 
 5. Open the application:
@@ -108,6 +108,6 @@ Contributions are welcome! Please follow these steps:
 
 ## Contact
 For any inquiries or support, please reach out to:
-- Email: rudraprataprp9651567619@gmail.com.com
-- GitHub: [your-username](https://github.com/rudra11911)
+- Email: sruthi.k22@iiits.in
+- GitHub: [KOMMATI SRUTHI](https://github.com/Sruthi141)
 
