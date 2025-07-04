@@ -108,6 +108,6 @@ Contributions are welcome! Please follow these steps:
 
 ## Contact
 For any inquiries or support, please reach out to:
-- Email: rudraprataprp9651567619@gmail.com.com
-- GitHub: [your-username](https://github.com/rudra11911)
+- Email: sruthikommatisruthikommati@gmail.com
+- GitHub: [Sruthi141](https://github.com/Sruthi141)
 
