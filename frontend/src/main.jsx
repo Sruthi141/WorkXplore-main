@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { Toaster } from "sonner";
-import dbstore from "./redux/dbStore.jsx";
+import dbstore from "./redux/dbstore.jsx";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
