@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------
+   Premium Theme Tokens (Aurora)
+   - Light + Dark
+   - Works with shadcn variables
+---------------------------- */
+
+:root {
+  --radius: 14px;
+
+  /* Light */
+  --background: 220 30% 98%;
+  --foreground: 224 40% 12%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 40% 12%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 40% 12%;
+
+  --primary: 243 75% 59%;             /* Indigo */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 220 22% 94%;
+  --secondary-foreground: 224 40% 12%;
+
+  --muted: 220 18% 93%;
+  --muted-foreground: 220 10% 40%;
+
+  --accent: 165 72% 41%;              /* Mint */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 18% 88%;
+  --input: 220 18% 88%;
+  --ring: 243 75% 59%;
+
+  /* Optional charts */
+  --chart-1: 243 75% 59%;
+  --chart-2: 165 72% 41%;
+  --chart-3: 198 80% 52%;
+  --chart-4: 35 92% 55%;
+  --chart-5: 280 75% 60%;
+}
+
+.dark {
+  /* Dark */
+  --background: 225 25% 7%;
+  --foreground: 210 40% 98%;
+
+  --card: 224 25% 10%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 224 25% 10%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 243 85% 68%;
+  --primary-foreground: 225 25% 7%;
+
+  --secondary: 225 18% 14%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 225 18% 14%;
+  --muted-foreground: 215 15% 70%;
+
+  --accent: 165 78% 48%;
+  --accent-foreground: 225 25% 7%;
+
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 225 18% 18%;
+  --input: 225 18% 18%;
+  --ring: 243 85% 68%;
+
+  --chart-1: 243 85% 68%;
+  --chart-2: 165 78% 48%;
+  --chart-3: 198 80% 60%;
+  --chart-4: 35 92% 62%;
+  --chart-5: 280 75% 68%;
+}
+
+/* Premium base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Premium utilities (unique look) */
+@layer utilities {
+  .aurora-bg {
+    background:
+      radial-gradient(900px 500px at 20% -10%, hsl(var(--primary) / 0.22), transparent 55%),
+      radial-gradient(800px 480px at 95% 10%, hsl(var(--accent) / 0.18), transparent 50%),
+      radial-gradient(700px 500px at 40% 110%, hsl(var(--chart-3) / 0.12), transparent 55%),
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background)));
+  }
+
+  .glass {
+    @apply bg-card/70 backdrop-blur-md border border-border/60 shadow-[0_10px_30px_rgba(0,0,0,0.08)];
+  }
+
+  .ring-glow {
+    box-shadow: 0 0 0 6px hsl(var(--primary) / 0.18);
+  }
+
+  .soft-shadow {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  }
+}
