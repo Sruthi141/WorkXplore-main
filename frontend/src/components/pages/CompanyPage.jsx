@@ -1,45 +1,41 @@
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import CompaniesTable from "../layout/company/CompanyJobsTable.jsx";
+import { useNavigate } from "react-router-dom";
+import useGetAllCompanies from "../../hooks/useGetAllCompanies";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setSearchCompanyByText } from "@/redux/companySlice";
 
-// import Navbar from '../common/navbar'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
-import CompaniesTable from '../layout/company/CompanyJobsTable'
-import { useNavigate } from 'react-router-dom'
-import useGetAllCompanies from '../../hooks/useGetAllCompanies'
-import { useState , useEffect } from 'react'
+function Companies() {
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-import { useDispatch } from 'react-redux'
-import { setSearchCompanyByText } from '@/redux/companySlice'
+  useGetAllCompanies();
 
-function Companies() {  
-    const [input, setInput] = useState("");
-    useGetAllCompanies();
-    const navigate = useNavigate();
+  useEffect(() => {
+    dispatch(setSearchCompanyByText(input));
+  }, [input, dispatch]);
 
-    const dispatch = useDispatch();
-
-    useEffect (() => {
-        dispatch(setSearchCompanyByText(input));
-    }, [input]);
-
-  
-    return (
-        <div>
-            {/* <Navbar /> */}
-            
-            <div className='max-w-6xl mx-auto my-10'>
-                <div className='flex items-center justify-between my-5'>
-                    <Input
-                        className="w-fit"
-                        placeholder="Filter by name"
-                        onChange={(e) => setInput(e.target.value)}
-                     
-                    />
-                    <Button onClick={() => navigate("/recruiter/companies/create")}>New Company</Button>
-                </div>
-                <CompaniesTable/>
-            </div>
+  return (
+    <div>
+      <div className="max-w-6xl mx-auto my-10">
+        <div className="flex items-center justify-between my-5">
+          <Input
+            className="w-fit"
+            placeholder="Filter by name"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <Button onClick={() => navigate("/recruiter/companies/create")}>
+            New Company
+          </Button>
         </div>
-    )
+        <CompaniesTable />
+      </div>
+    </div>
+  );
 }
 
-export default Companies
+export default Companies;
