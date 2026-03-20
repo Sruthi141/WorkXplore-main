@@ -1,6 +1,6 @@
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import CompaniesTable from "../layout/company/CompanyJobsTable.jsx";
+import CompaniesTable from "../layout/Company/CompanyJobsTable.jsx";
 import { useNavigate } from "react-router-dom";
 import useGetAllCompanies from "../../hooks/useGetAllCompanies";
 import { useState, useEffect } from "react";
