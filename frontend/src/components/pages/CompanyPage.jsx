@@ -5,7 +5,7 @@ import { Button } from "../ui/button.jsx";
 import CompaniesTable from "../layout/company/CompanyJobsTable.jsx";
 
 import { useNavigate } from "react-router-dom";
-import useGetAllCompanies from "../../hooks/useGetAllCompanies.js";
+import useGetAllCompanies from "../../hooks/useGetAllCompanies.jsx";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 

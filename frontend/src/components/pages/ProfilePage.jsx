@@ -15,7 +15,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 // ✅ safer path
-import useGetAppliedJobs from "../../hooks/useGetAppliedJobs.js";
+import useGetAppliedJobs from "../../hooks/useGetAppliedJobs.jsx";
 
   function Profile() {
     useGetAppliedJobs();

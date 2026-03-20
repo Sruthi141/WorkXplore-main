@@ -1,6 +1,6 @@
 
 import { useSelector } from "react-redux";
-import RecruiterDashboard from "../dashboard/RecruiterDashboard.jsx";
+import RecruiterDashboard from "../dashboard/RecruiterDaashboard.jsx";
 import UserDashboard from "../dashboard/UserDashboard.jsx";
 
 function Dashboard() {

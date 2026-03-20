@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useEffect } from "react";
-// import Navbar from "../common/navbar.jsx";
+// import Navbar from "../common/Navbar.jsx";
 
 import Herosection from "../layout/home/HeroPremium.jsx";
 import CategoryCatalouge from "../layout/home/CategoryCatalouge.jsx";
 import Latestjobs from "../layout/home/Latestjobs.jsx";
 import Footer from "../common/Footer.jsx";
 
-import useGetAllJobs from "../../hooks/useGetAllJobs.js";
+import useGetAllJobs from "../../hooks/useGetAllJobs.jsx";
 import { setSearchedQuery } from "../../redux/jobslice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 

@@ -6,7 +6,7 @@ import { Button } from "../ui/button.jsx";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import useGetAllRecruiterJobs from "../../hooks/useGetAllRecruiterJobs.js";
+import useGetAllRecruiterJobs from "../../hooks/useGetAllRecruiterJobs.jsx";
 import { setSearchJobByText } from "../../redux/jobslice.jsx";
 import RecruiterJobsTable from "../layout/recruiterJobs/RecruiterJobsTable.jsx";
 

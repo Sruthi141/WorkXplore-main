@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 
 // ✅ safer
-import useGetAllJobs from "../../hooks/useGetAllJobs.js";
+import useGetAllJobs from "../../hooks/useGetAllJobs.jsx";
 
 const Jobs = () => {
   const dispatch = useDispatch();

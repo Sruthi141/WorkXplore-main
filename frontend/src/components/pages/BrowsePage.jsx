@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSearchedQuery } from '@/redux/jobslice.jsx';
 
 // ✅ safer
-import useGetAllJobs from '../../hooks/useGetAllJobs.js';
+import useGetAllJobs from '../../hooks/useGetAllJobs.jsx';
 
 import { Search } from 'lucide-react';
 import { Button } from '../ui/button.jsx';

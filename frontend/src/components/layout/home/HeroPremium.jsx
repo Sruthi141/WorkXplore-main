@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 
 // ✅ FIXED
-import { Button } from '../ui/button.jsx'
+import { Button } from '../../ui/button.jsx'
 const featureItems = [
   { title: 'Smart filters', emoji: '⚡' },
   { title: 'Job insights', emoji: '📊' },

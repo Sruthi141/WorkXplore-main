@@ -14,7 +14,7 @@ import { toast } from "sonner";
 import { useSelector } from "react-redux";
 
 // ✅ make sure this matches file exactly
-import useGetCompanyById from "../../../hooks/useGetCompanyById.js";
+import useGetCompanyById from "../../../hooks/useGetCompanyById.jsx";
 const CompanySetup = () => {
     const params = useParams();
     useGetCompanyById(params.id);
