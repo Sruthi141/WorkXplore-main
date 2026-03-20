@@ -1,5 +1,5 @@
-import { setCompanies} from '../redux/companyslice'
-import { COMPANY_API_END_POINT} from '../utils/constant'
+import { setCompanies} from '../redux/companyslice.jsx'
+import { COMPANY_API_END_POINT} from '../utils/constant.js'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'

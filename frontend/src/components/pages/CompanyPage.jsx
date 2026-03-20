@@ -2,7 +2,7 @@ import { Input } from "../ui/input.jsx";
 import { Button } from "../ui/button.jsx";
 
 // ✅ fixed folder case
-import CompaniesTable from "../layout/company/CompanyJobsTable.jsx";
+import CompaniesTable from "../layout/Company/CompanyJobsTable.jsx";
 
 import { useNavigate } from "react-router-dom";
 import useGetAllCompanies from "../../hooks/useGetAllCompanies.jsx";

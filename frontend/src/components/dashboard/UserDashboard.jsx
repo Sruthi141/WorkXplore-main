@@ -27,7 +27,7 @@ import {
 import { Badge } from "../ui/badge.jsx";
 
 import { useSelector } from "react-redux";
-import useGetAppliedJobs from "@/hooks/useGetAppliedJobs";
+import useGetAppliedJobs from "../../hooks/useGetAppliedJobs.jsx";
 
 // Register chart.js components
 ChartJS.register(

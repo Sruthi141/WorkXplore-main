@@ -12,7 +12,7 @@ import { COMPANY_API_END_POINT } from "../../../utils/constant.js";
 import { toast } from "sonner";
 import { useState } from "react";
 
-import { setSingleCompany } from "@/redux/companyslice.jsx";
+import { setSingleCompany } from "../../../redux/companyslice.jsx";
 import { useDispatch } from "react-redux";
 function CompanyCreate() {
   const navigate = useNavigate();

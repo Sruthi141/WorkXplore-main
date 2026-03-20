@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import { ADMIN_API_END_POINT } from "./../utils/constant";
-import Widget from "../components/Widget";
-import Featured from "../components/Featured";
-import Chart from "../components/Chart";
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
+import Widget from "../components/Widget.jsx";
+import Featured from "../components/Featured.jsx";
+import Chart from "../components/Chart.jsx";
 import { motion } from "framer-motion";
 import { RefreshCcw, Download, Sparkles, TrendingUp, Users, Briefcase } from "lucide-react";
 import { toast } from "sonner";

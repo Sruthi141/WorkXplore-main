@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-// import Navbar from '../common/Navbar'
+// import Navbar from '../common/Navbar.jsx'
 
 import ApplicantsTable from "../layout/applicants/ApplicantsTable.jsx";
 import axios from "axios";

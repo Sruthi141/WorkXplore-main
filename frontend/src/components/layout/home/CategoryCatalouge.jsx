@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 // ✅ FIXED HERE
-import { setSearchedQuery } from "@/redux/jobslice.jsx";
+import { setSearchedQuery } from "../../../redux/jobslice.jsx";
 
 const category = [
     "Frontend Developer",

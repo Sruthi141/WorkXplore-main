@@ -1,4 +1,4 @@
-// import Navbar from "../common/Navbar";
+// import Navbar from "../common/Navbar.jsx";
 
 import { Button } from "../ui/button.jsx";
 import { motion } from "framer-motion";

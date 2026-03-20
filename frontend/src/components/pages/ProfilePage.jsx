@@ -1,4 +1,4 @@
-  // import Navbar from "../common/Navbar";
+  // import Navbar from "../common/Navbar.jsx";
 
 import { Avatar, AvatarImage } from "../ui/avatar.jsx";
 import { Button } from "../ui/button.jsx";
@@ -8,8 +8,8 @@ import { Label } from "../ui/label.jsx";
 import { Mail, Contact, Pen } from "lucide-react";
 
 // ✅ fix case
-import AppliedJobTable from "../layout/profile/AppliedJobs.jsx";
-import Updateprofile from "../layout/profile/UpdateProfile.jsx";
+import AppliedJobTable from "../layout/profile/Appliedjobs.jsx";
+import Updateprofile from "../layout/profile/Updateprofile.jsx";
 
 import { useState } from "react";
 import { useSelector } from "react-redux";

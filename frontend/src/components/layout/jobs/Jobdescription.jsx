@@ -4,7 +4,7 @@ import { Button } from '../../ui/button.jsx';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from '../../../utils/constant.js';
-import { setSingleJob } from '@/redux/jobslice.jsx';
+import { setSingleJob } from '../../../redux/jobslice.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'sonner';
 import Navbar from '../../common/Navbar.jsx';

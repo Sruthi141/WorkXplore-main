@@ -13,7 +13,7 @@ import { Label } from "../../ui/label.jsx";
 import { Input } from "../../ui/input.jsx";
 import { Button } from "../../ui/button.jsx";
 
-import { setUser } from "@/redux/authslice.jsx";
+import { setUser } from "../../../redux/authslice.jsx";
 
 import axios from "axios";
 import { USER_API_END_POINT } from "../../../utils/constant.js";

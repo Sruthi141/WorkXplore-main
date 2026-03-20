@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
-import { recruiterColomns } from "./../datatablesource";
-import { ADMIN_API_END_POINT } from "./../utils/constant";
+import { recruiterColomns } from "../datatablesource.jsx";
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
 import { Link } from "react-router-dom";
 
 const paginationModel = { page: 0, pageSize: 5 };

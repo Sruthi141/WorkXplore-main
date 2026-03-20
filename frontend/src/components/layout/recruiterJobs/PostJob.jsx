@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import Navbar from '../../common/Navbar'
+// import Navbar from '../../common/Navbar.jsx'
 
 import { Label } from '../../ui/label.jsx';
 import { Input } from '../../ui/input.jsx';

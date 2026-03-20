@@ -14,7 +14,7 @@ import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
 
 // ✅ FIXED HERE
-import { setLoading } from "@/redux/authslice.jsx";
+import { setLoading } from "../../redux/authslice.jsx";
 
 import { Loader2 } from "lucide-react";
 

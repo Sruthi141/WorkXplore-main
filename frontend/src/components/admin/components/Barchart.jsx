@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import axios from "axios";
-import { ADMIN_API_END_POINT } from "../utils/constant";
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
 
 function Barchart() {
   const [users, setUsers] = useState([]);

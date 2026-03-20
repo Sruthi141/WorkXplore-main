@@ -1,49 +1,49 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Homepage from "./components/pages/Homepage";
-import Login from "./components/auth/login";
-import Signup from "./components/auth/signup";
-import Jobs from "./components/pages/Jobspage";
-import Browse from "./components/pages/BrowsePage";
-import Profile from "./components/pages/ProfilePage";
-import Jobdescription from "./components/layout/jobs/Jobdescription";
-import Companies from "./components/pages/CompanyPage";
-import CompanyCreate from "./components/layout/Company/CompanyCreate";
-import CompanySetup from "./components/layout/Company/CompanySetup";
-import RecruiterJobsPage from "./components/pages/RecruiterJobsPage";
-import PostJob from "./components/layout/recruiterJobs/PostJob";
-import ApplicantPage from "./components/pages/ApplicantPage";
-import ProtectedRoute from "./utils/ProtectedRoute";
-import Dashboard from "./components/pages/Dashboard";
-import ProtectedRoute2 from "./utils/ProtectedRoute2";
+import Homepage from "./components/pages/Homepage.jsx";
+import Login from "./components/auth/login.jsx";
+import Signup from "./components/auth/signup.jsx";
+import Jobs from "./components/pages/Jobspage.jsx";
+import Browse from "./components/pages/BrowsePage.jsx";
+import Profile from "./components/pages/ProfilePage.jsx";
+import Jobdescription from "./components/layout/jobs/Jobdescription.jsx";
+import Companies from "./components/pages/CompanyPage.jsx";
+import CompanyCreate from "./components/layout/Company/CompanyCreate.jsx";
+import CompanySetup from "./components/layout/Company/CompanySetup.jsx";
+import RecruiterJobsPage from "./components/pages/RecruiterJobsPage.jsx";
+import PostJob from "./components/layout/recruiterJobs/PostJob.jsx";
+import ApplicantPage from "./components/pages/ApplicantPage.jsx";
+import ProtectedRoute from "./utils/ProtectedRoute.jsx";
+import Dashboard from "./components/pages/Dashboard.jsx";
+import ProtectedRoute2 from "./utils/ProtectedRoute2.jsx";
 import "animate.css";
 
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 // ✅ Global navbar layout (new)
-import GlobalLayout from "./components/layout/GlobalLayout";
+import GlobalLayout from "./components/layout/GlobalLayout.jsx";
 
 // Admin panel imports
-import Sidebar from "./components/admin/components/Sidebar";
-import AdminNavbar from "./components/admin/components/Navbar";
-import Home from "./components/admin/pages/Home";
-import Users from "./components/admin/pages/Users";
-import Recruiters from "./components/admin/pages/Recruiters";
-import Single from "./components/admin/pages/Single";
-import New from "./components/admin/pages/New";
-import Single2 from "./components/admin/pages/Single2";
-import Post from "./components/admin/components/Post";
-import ChartHolder from "./components/admin/pages/ChartHolder";
-import StatHolder from "./components/admin/pages/StatHolder";
+import Sidebar from "./components/admin/components/Sidebar.jsx";
+import AdminNavbar from "./components/admin/components/Navbar.jsx";
+import Home from "./components/admin/pages/Home.jsx";
+import Users from "./components/admin/pages/Users.jsx";
+import Recruiters from "./components/admin/pages/Recruiters.jsx";
+import Single from "./components/admin/pages/Single.jsx";
+import New from "./components/admin/pages/New.jsx";
+import Single2 from "./components/admin/pages/Single2.jsx";
+import Post from "./components/admin/components/Post.jsx";
+import ChartHolder from "./components/admin/pages/ChartHolder.jsx";
+import StatHolder from "./components/admin/pages/StatHolder.jsx";
 
-import PageTransition from "./components/layout/PageTransition";
+import PageTransition from "./components/layout/PageTransition.jsx";
 
-import Revenuehome from "./components/revenue/Revenuehome";
-import Plans from "./components/revenue/Plans";
-import ResumePage from "./components/pages/ResumePage";
-import PremiumSuccess from "./components/pages/PremiumSuccess";
-import PremiumCancel from "./components/pages/PremiumCancel";
+import Revenuehome from "./components/revenue/Revenuehome.jsx";
+import Plans from "./components/revenue/Plans.jsx";
+import ResumePage from "./components/pages/ResumePage.jsx";
+import PremiumSuccess from "./components/pages/PremiumSuccess.jsx";
+import PremiumCancel from "./components/pages/PremiumCancel.jsx";
 
 function App() {
   const [stripePromise, setStripePromise] = useState(null);

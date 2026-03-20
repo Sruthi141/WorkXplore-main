@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 // ✅ FIXED HERE
-import { setSearchedCompany } from "@/redux/companyslice.jsx";
+import { setSearchedCompany } from "../../../redux/companyslice.jsx";
 
 import { useEffect } from "react";
 

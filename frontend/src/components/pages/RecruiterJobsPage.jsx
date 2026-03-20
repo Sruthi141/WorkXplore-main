@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Navbar from '../common/Navbar'
+// import Navbar from '../common/Navbar.jsx'
 
 import { Input } from "../ui/input.jsx";
 import { Button } from "../ui/button.jsx";

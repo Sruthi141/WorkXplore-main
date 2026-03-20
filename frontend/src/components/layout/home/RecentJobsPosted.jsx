@@ -1,4 +1,4 @@
-import JobCard from "./LatestJobCard.jsx";
+import JobCard from "./LatestJobcard.jsx";
 import { useSelector } from "react-redux";
 
 function RecentJobsPosted() {

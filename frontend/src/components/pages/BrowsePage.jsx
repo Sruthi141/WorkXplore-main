@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-// import Navbar from '../common/Navbar';
+// import Navbar from '../common/Navbar.jsx';
 
-import Job from '../layout/jobs/JobCard.jsx';
+import Job from '../layout/jobs/Jobcard.jsx';
 
 import { useDispatch, useSelector } from 'react-redux';
 
 // ✅ fixed
-import { setSearchedQuery } from '@/redux/jobslice.jsx';
+import { setSearchedQuery } from '../../redux/jobslice.jsx';
 
 // ✅ safer
 import useGetAllJobs from '../../hooks/useGetAllJobs.jsx';

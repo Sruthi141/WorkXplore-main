@@ -9,7 +9,7 @@ import axios from "axios";
 import { USER_API_END_POINT } from "../../utils/constant.js";
 import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading, setUser } from "@/redux/authslice.jsx";
+import { setLoading, setUser } from "../../redux/authslice.jsx";
 import { Eye, EyeOff, Loader2, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 

@@ -4,12 +4,12 @@ import { Avatar, AvatarImage } from "../ui/avatar.jsx";
 import { Button } from "../ui/button.jsx";
 
 import { Sun, Moon } from "lucide-react";
-import useTheme from "@/hooks/useTheme";
+import useTheme from "../../hooks/useTheme.jsx";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // ✅ FIXED HERE
-import { setUser } from "@/redux/authslice.jsx";
+import { setUser } from "../../redux/authslice.jsx";
 
 import axios from "axios";
 import { USER_API_END_POINT } from "../../utils/constant.js";

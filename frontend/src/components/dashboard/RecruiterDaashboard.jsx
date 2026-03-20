@@ -15,8 +15,8 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { FaBriefcase, FaIndustry, FaCalendarCheck } from "react-icons/fa";
 
-import useGetAllCompanies from "@/hooks/useGetAllCompanies";
-import useGetAllRecruiterJobs from "@/hooks/useGetAllRecruiterJobs";
+import useGetAllCompanies from "../../hooks/useGetAllCompanies.jsx";
+import useGetAllRecruiterJobs from "../../hooks/useGetAllRecruiterJobs.jsx";
 
 import { useSelector } from "react-redux";
 
