@@ -1,18 +1,27 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../ui/carousel';
-import { Button } from '../../ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../ui/carousel.jsx";
+
+import { Button } from "../../ui/button.jsx";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { setSearchedCompany } from '@/redux/companySlice';
-import { useEffect } from 'react';
+import { useDispatch } from "react-redux";
+
+// ✅ FIXED HERE
+import { setSearchedCompany } from "@/redux/companyslice.jsx";
+
+import { useEffect } from "react";
 
 const category = [
-    "Google",
-    "Newly",
-    "Amazon",
-    "Microsoft",
-    "Apple",
+  "Google",
+  "Newly",
+  "Amazon",
+  "Microsoft",
+  "Apple",
 ];
-
 const CompanyCatalouge = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();

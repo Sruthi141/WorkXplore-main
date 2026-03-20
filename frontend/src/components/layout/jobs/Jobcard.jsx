@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import { Button } from '../../ui/button'
+import { Button } from '../../ui/button.jsx'
 import { Bookmark } from 'lucide-react'
-import { Badge } from '../../ui/badge'
+import { Badge } from '../../ui/badge.jsx'
 import { useNavigate } from 'react-router-dom'
 
 import { useSelector } from 'react-redux'

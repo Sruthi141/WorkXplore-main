@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
-// import Navbar from "../common/Navbar"; // ✅ CHANGE 1 (case-sensitive path)
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { RadioGroup } from "../ui/radio-group";
-import { Button } from "../ui/button";
+
+import { Label } from "../ui/label.jsx";
+import { Input } from "../ui/input.jsx";
+import { RadioGroup } from "../ui/radio-group.jsx";
+import { Button } from "../ui/button.jsx";
+
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { USER_API_END_POINT } from "../../utils/constant";
+
+import { USER_API_END_POINT } from "../../utils/constant.js";
+
 import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading } from "@/redux/authSlice";
+
+// ✅ FIXED HERE
+import { setLoading } from "@/redux/authslice.jsx";
+
 import { Loader2 } from "lucide-react";
 
 const Signup = () => {

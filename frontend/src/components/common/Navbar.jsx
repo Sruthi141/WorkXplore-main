@@ -1,14 +1,18 @@
 /* eslint-disable no-unused-vars */
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import { Avatar, AvatarImage } from "../ui/avatar";
-import { Button } from "../ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover.jsx";
+import { Avatar, AvatarImage } from "../ui/avatar.jsx";
+import { Button } from "../ui/button.jsx";
+
 import { Sun, Moon } from "lucide-react";
 import useTheme from "@/hooks/useTheme";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "@/redux/authSlice";
+
+// ✅ FIXED HERE
+import { setUser } from "@/redux/authslice.jsx";
+
 import axios from "axios";
-import { USER_API_END_POINT } from "../../utils/constant";
+import { USER_API_END_POINT } from "../../utils/constant.js";
 import { toast } from "sonner";
 
 function Navbar() {

@@ -1,9 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import UserChart from "../components/UserChart";
-import TableList2 from "../components/TableList2";
-import { ADMIN_API_END_POINT } from "./../utils/constant";
+
+// ✅ FIXED imports
+import UserChart from "../components/UserChart.jsx";
+import TableList2 from "../components/TableList2.jsx";
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
+
 import { motion } from "framer-motion";
 import {
   ArrowLeft,

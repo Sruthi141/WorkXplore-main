@@ -1,12 +1,14 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 // import Navbar from '../common/Navbar'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button' 
-import { useNavigate } from 'react-router-dom' 
-import { useDispatch } from 'react-redux' 
-import useGetAllRecruiterJobs from '../../hooks/useGetAllRecruiterJobs'
-import { setSearchJobByText } from '@/redux/jobSlice'
-import RecruiterJobsTable from '../layout/recruiterJobs/RecruiterJobsTable'
+
+import { Input } from "../ui/input.jsx";
+import { Button } from "../ui/button.jsx";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import useGetAllRecruiterJobs from "../../hooks/useGetAllRecruiterJobs.js";
+import { setSearchJobByText } from "../../redux/jobslice.jsx";
+import RecruiterJobsTable from "../layout/recruiterJobs/RecruiterJobsTable.jsx";
 
 const AdminJobs = () => {
   useGetAllRecruiterJobs();

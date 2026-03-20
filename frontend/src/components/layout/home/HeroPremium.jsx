@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
 
+// ✅ FIXED
+import { Button } from '../ui/button.jsx'
 const featureItems = [
   { title: 'Smart filters', emoji: '⚡' },
   { title: 'Job insights', emoji: '📊' },

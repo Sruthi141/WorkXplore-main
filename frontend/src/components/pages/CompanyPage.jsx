@@ -1,11 +1,16 @@
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import CompaniesTable from "../layout/Company/CompanyJobsTable.jsx";
+import { Input } from "../ui/input.jsx";
+import { Button } from "../ui/button.jsx";
+
+// ✅ fixed folder case
+import CompaniesTable from "../layout/company/CompanyJobsTable.jsx";
+
 import { useNavigate } from "react-router-dom";
-import useGetAllCompanies from "../../hooks/useGetAllCompanies";
+import useGetAllCompanies from "../../hooks/useGetAllCompanies.js";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setSearchCompanyByText } from "@/redux/companySlice";
+
+// ✅ fixed slice name
+import { setSearchCompanyByText } from "../../redux/companyslice.jsx";
 
 function Companies() {
   const [input, setInput] = useState("");

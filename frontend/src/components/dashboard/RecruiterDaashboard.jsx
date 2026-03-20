@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card.jsx";
+
 import {
   LineChart,
   Line,
@@ -9,12 +11,14 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+
 import { Link, useNavigate } from "react-router-dom";
 import { FaBriefcase, FaIndustry, FaCalendarCheck } from "react-icons/fa";
+
 import useGetAllCompanies from "@/hooks/useGetAllCompanies";
-import { useSelector } from "react-redux";
 import useGetAllRecruiterJobs from "@/hooks/useGetAllRecruiterJobs";
 
+import { useSelector } from "react-redux";
 
 function RecruiterDashboard() {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Popup from './popup';
+import Popup from './Popup.jsx'; // ✅ fix case + extension
 import { useNavigate } from 'react-router-dom';
 
 function Revenuehome() {

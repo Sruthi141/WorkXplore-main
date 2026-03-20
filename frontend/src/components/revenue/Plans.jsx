@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import PlanCard from "./PlanCard";
-import { USER_API_END_POINT } from "../../utils/constant";
+import { USER_API_END_POINT } from "../../utils/constant.js";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 

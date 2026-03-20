@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-// Importing actions
-import { Line, Pie } from "react-chartjs-2"; // Importing chart components
+import { Line, Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,8 +12,9 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
-import { FaBriefcase, FaCalendarCheck, FaIndustry } from "react-icons/fa"; // For icons
-import { Link } from "react-router-dom"; // For navigation
+import { FaBriefcase, FaCalendarCheck, FaIndustry } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 import {
   Table,
   TableCaption,
@@ -23,11 +23,11 @@ import {
   TableHead,
   TableBody,
   TableCell,
-} from "../ui/table";
-import { Badge } from "../ui/badge"; 
+} from "../ui/table.jsx";
+import { Badge } from "../ui/badge.jsx";
+
 import { useSelector } from "react-redux";
 import useGetAppliedJobs from "@/hooks/useGetAppliedJobs";
-// For table
 
 // Register chart.js components
 ChartJS.register(

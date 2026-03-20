@@ -1,18 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "../../ui/dialog";
-import { Label } from "../../ui/label";
-import { Input } from "../../ui/input";
-import { Button } from "../../ui/button";
-import { setUser } from "@/redux/authSlice";
+} from "../../ui/dialog.jsx";
+
+import { Label } from "../../ui/label.jsx";
+import { Input } from "../../ui/input.jsx";
+import { Button } from "../../ui/button.jsx";
+
+import { setUser } from "@/redux/authslice.jsx";
+
 import axios from "axios";
-import { USER_API_END_POINT } from "../../../utils/constant";
+import { USER_API_END_POINT } from "../../../utils/constant.js";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";

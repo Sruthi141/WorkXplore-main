@@ -1,5 +1,5 @@
+import JobCard from "./LatestJobCard.jsx";
 import { useSelector } from "react-redux";
-import JobCard from "../jobs/Jobcard";
 
 function RecentJobsPosted() {
   const { allAdminJobs } = useSelector((store) => store.job);

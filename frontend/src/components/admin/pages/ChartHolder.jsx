@@ -1,10 +1,11 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { BarChart3, PieChart, Sparkles, LayoutGrid, Focus } from "lucide-react";
 
-import PiechartUser from "../components/PiechartUser";
-import PiechartRecruiter from "../components/PiechartRecruiter";
-import Barchart from "../components/Barchart";
+// ✅ Add .jsx extension (important for Vercel)
+import PiechartUser from "../components/PiechartUser.jsx";
+import PiechartRecruiter from "../components/PiechartRecruiter.jsx";
+import Barchart from "../components/Barchart.jsx";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -25,6 +26,7 @@ function GlassCard({ className = "", children }) {
 function Chip({ icon, children, tone = "default" }) {
   const base =
     "inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium";
+
   const styles =
     tone === "primary"
       ? "border-primary/25 bg-primary/10 text-primary"
@@ -41,7 +43,7 @@ function Chip({ icon, children, tone = "default" }) {
 }
 
 export default function ChartHolder() {
-  const [mode, setMode] = useState("compact"); // "compact" | "focus"
+  const [mode, setMode] = useState("compact");
 
   const subtitle = useMemo(() => {
     return mode === "focus"
@@ -51,7 +53,7 @@ export default function ChartHolder() {
 
   return (
     <div className="relative">
-      {/* Premium aurora background */}
+      {/* Background */}
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-90">
         <div className="absolute -top-20 left-[-10%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute -top-24 right-[-12%] h-72 w-72 rounded-full bg-emerald-500/15 blur-3xl" />
@@ -75,8 +77,9 @@ export default function ChartHolder() {
                 Analytics Studio
               </h1>
             </div>
+
             <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-              Premium visual dashboard for user & recruiter distribution with trend insights.
+              Premium visual dashboard for user & recruiter distribution.
             </p>
 
             <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -86,40 +89,34 @@ export default function ChartHolder() {
               <Chip tone="good" icon={<BarChart3 size={14} />}>
                 Trend View
               </Chip>
-              <Chip icon={<LayoutGrid size={14} />}>Responsive Layout</Chip>
+              <Chip icon={<LayoutGrid size={14} />}>
+                Responsive Layout
+              </Chip>
             </div>
           </div>
 
-          {/* View toggle (UI-only feature) */}
+          {/* Toggle */}
           <div className="flex items-center gap-2">
             <button
-              type="button"
               onClick={() => setMode("compact")}
-              className={[
-                "inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-semibold transition",
-                "focus:outline-none focus:ring-2 focus:ring-ring/50",
+              className={`px-4 py-2 rounded-xl border text-sm ${
                 mode === "compact"
-                  ? "border-primary/30 bg-primary/10 text-primary"
-                  : "border-border/70 bg-card/70 text-foreground hover:bg-muted/60",
-              ].join(" ")}
+                  ? "bg-primary/10 text-primary"
+                  : "bg-card"
+              }`}
             >
-              <LayoutGrid size={16} />
-              Compact
+              <LayoutGrid size={16} /> Compact
             </button>
 
             <button
-              type="button"
               onClick={() => setMode("focus")}
-              className={[
-                "inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-semibold transition",
-                "focus:outline-none focus:ring-2 focus:ring-ring/50",
+              className={`px-4 py-2 rounded-xl border text-sm ${
                 mode === "focus"
-                  ? "border-primary/30 bg-primary/10 text-primary"
-                  : "border-border/70 bg-card/70 text-foreground hover:bg-muted/60",
-              ].join(" ")}
+                  ? "bg-primary/10 text-primary"
+                  : "bg-card"
+              }`}
             >
-              <Focus size={16} />
-              Focus
+              <Focus size={16} /> Focus
             </button>
           </div>
         </div>
@@ -130,156 +127,32 @@ export default function ChartHolder() {
       {/* Content */}
       {mode === "compact" ? (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-          {/* Left: Pie cards */}
+          {/* Pie charts */}
           <div className="lg:col-span-5 space-y-4">
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease }}
-            >
-              <GlassCard className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="text-base font-semibold text-foreground">Students Distribution</h2>
-                    <p className="text-sm text-muted-foreground">
-                      Understand user base breakdown.
-                    </p>
-                  </div>
-                  <Chip tone="primary" icon={<PieChart size={14} />}>Students</Chip>
-                </div>
-                <div className="mt-4">
-                  <PiechartUser />
-                </div>
-              </GlassCard>
-            </motion.div>
+            <GlassCard className="p-4">
+              <h2 className="font-semibold">Students Distribution</h2>
+              <PiechartUser />
+            </GlassCard>
 
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease, delay: 0.05 }}
-            >
-              <GlassCard className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="text-base font-semibold text-foreground">Recruiters Distribution</h2>
-                    <p className="text-sm text-muted-foreground">
-                      Track hiring-side presence.
-                    </p>
-                  </div>
-                  <Chip tone="good" icon={<PieChart size={14} />}>Recruiters</Chip>
-                </div>
-                <div className="mt-4">
-                  <PiechartRecruiter />
-                </div>
-              </GlassCard>
-            </motion.div>
+            <GlassCard className="p-4">
+              <h2 className="font-semibold">Recruiters Distribution</h2>
+              <PiechartRecruiter />
+            </GlassCard>
           </div>
 
-          {/* Right: Bar chart */}
+          {/* Bar chart */}
           <div className="lg:col-span-7">
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease, delay: 0.1 }}
-            >
-              <GlassCard className="p-4 h-full">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="text-base font-semibold text-foreground">Trend Analysis</h2>
-                    <p className="text-sm text-muted-foreground">
-                      Compare overall activity with a clean bar visualization.
-                    </p>
-                  </div>
-                  <Chip icon={<BarChart3 size={14} />}>Bar</Chip>
-                </div>
-
-                <div className="mt-4">
-                  <Barchart />
-                </div>
-              </GlassCard>
-            </motion.div>
+            <GlassCard className="p-4">
+              <h2 className="font-semibold">Trend Analysis</h2>
+              <Barchart />
+            </GlassCard>
           </div>
         </div>
       ) : (
-        // Focus mode: Bar chart large + side quick summary panel (UI-only)
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-          <div className="lg:col-span-9">
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease }}
-            >
-              <GlassCard className="p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="text-base font-semibold text-foreground">Deep Trend View</h2>
-                    <p className="text-sm text-muted-foreground">
-                      Focus on growth and activity changes.
-                    </p>
-                  </div>
-                  <Chip tone="primary" icon={<BarChart3 size={14} />}>Focus</Chip>
-                </div>
-                <div className="mt-4">
-                  <Barchart />
-                </div>
-              </GlassCard>
-            </motion.div>
-          </div>
-
-          <div className="lg:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, ease, delay: 0.05 }}
-              className="space-y-4"
-            >
-              <GlassCard className="p-4">
-                <h3 className="text-sm font-semibold text-foreground">Quick Insights</h3>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  UI-only summary cards (no backend changes).
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <div className="rounded-xl border border-border/60 bg-muted/30 p-3">
-                    <div className="text-xs text-muted-foreground">Suggestion</div>
-                    <div className="mt-1 text-sm font-medium text-foreground">
-                      Highlight top locations in Jobs page
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-border/60 bg-muted/30 p-3">
-                    <div className="text-xs text-muted-foreground">Suggestion</div>
-                    <div className="mt-1 text-sm font-medium text-foreground">
-                      Add “Saved Jobs” & “Recent Searches”
-                    </div>
-                  </div>
-                </div>
-              </GlassCard>
-
-              <GlassCard className="p-4">
-                <h3 className="text-sm font-semibold text-foreground">Distributions</h3>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  Quick access to pie charts.
-                </p>
-
-                <div className="mt-3 grid gap-2">
-                  <button
-                    type="button"
-                    className="rounded-xl border border-border/70 bg-card/70 px-3 py-2 text-sm font-medium text-foreground hover:bg-muted/60 transition"
-                  >
-                    Students Pie
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-xl border border-border/70 bg-card/70 px-3 py-2 text-sm font-medium text-foreground hover:bg-muted/60 transition"
-                  >
-                    Recruiters Pie
-                  </button>
-                </div>
-              </GlassCard>
-            </motion.div>
-          </div>
-        </div>
+        <GlassCard className="p-4">
+          <h2 className="font-semibold">Deep Trend View</h2>
+          <Barchart />
+        </GlassCard>
       )}
     </div>
   );

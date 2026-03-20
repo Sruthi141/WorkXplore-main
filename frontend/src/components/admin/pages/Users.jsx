@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Datatable from "../components/Datatable";
+import Datatable from "../components/Datatable.jsx";
 import { Download, RefreshCcw, Sparkles, Users as UsersIcon } from "lucide-react";
 import { toast } from "sonner";
 

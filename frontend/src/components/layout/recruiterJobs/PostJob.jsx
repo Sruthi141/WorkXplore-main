@@ -1,16 +1,27 @@
-import{ useState } from 'react'
+import { useState } from 'react';
 // import Navbar from '../../common/Navbar'
-import { Label } from '../../ui/label'
-import { Input } from '../../ui/input'
-import { Button } from '../../ui/button'
-import { useSelector } from 'react-redux'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '../../ui/select'
-import axios from 'axios'
-import { JOB_API_END_POINT } from '../../../utils/constant'
-import { toast } from 'sonner'
-import { useNavigate } from 'react-router-dom'
-import { Loader2 } from 'lucide-react'
 
+import { Label } from '../../ui/label.jsx';
+import { Input } from '../../ui/input.jsx';
+import { Button } from '../../ui/button.jsx';
+
+import { useSelector } from 'react-redux';
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../ui/select.jsx';
+
+import axios from 'axios';
+import { JOB_API_END_POINT } from '../../../utils/constant.js';
+
+import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
+import { Loader2 } from 'lucide-react';
 const PostJob = () => {
     const [input, setInput] = useState({
         title: "",

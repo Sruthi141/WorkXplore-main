@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { RadioGroup } from "../ui/radio-group";
+import { Label } from "../ui/label.jsx";
+import { Input } from "../ui/input.jsx";
+import { Button } from "../ui/button.jsx";
+import { RadioGroup } from "../ui/radio-group.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import { USER_API_END_POINT } from "../../utils/constant";
+import { USER_API_END_POINT } from "../../utils/constant.js";
 import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading, setUser } from "@/redux/authslice";
+import { setLoading, setUser } from "@/redux/authslice.jsx";
 import { Eye, EyeOff, Loader2, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 

@@ -1,8 +1,8 @@
 // import Navbar from "../common/Navbar";
-import { Button } from "../ui/button";
+
+import { Button } from "../ui/button.jsx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 const variants = {
   initial: { opacity: 0, y: 12 },
   animate: { opacity: 1, y: 0 },

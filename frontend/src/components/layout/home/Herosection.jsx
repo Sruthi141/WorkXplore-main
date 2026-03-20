@@ -1,8 +1,9 @@
 import heroimage from "../../../assets/hero.jpg";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import { Button } from '@/components/ui/button'
 
+// ✅ safer import
+import { Button } from "../../ui/button.jsx";
 function HeroSection() {
   const navigate = useNavigate();
   const learnMoreRef = useRef(null); // Create a ref for the target element

@@ -1,7 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import React from "react";
-import { pageVariant } from "@/libs/motion";
+
+// ✅ fixed
+import { pageVariant } from "../../libs/motion.js";
 
 export default function PageTransition({ children }) {
   const location = useLocation();

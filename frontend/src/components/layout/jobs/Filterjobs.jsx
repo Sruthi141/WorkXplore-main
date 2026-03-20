@@ -1,7 +1,11 @@
-import { useEffect, useState, useMemo } from 'react'
-import { Label } from '../../ui/label'
-import { useDispatch, useSelector } from 'react-redux'
-import { setFilters } from '@/redux/jobslice'
+import { useEffect, useState, useMemo } from 'react';
+
+import { Label } from '../../ui/label.jsx';
+
+import { useDispatch, useSelector } from 'react-redux';
+
+// ✅ fixed
+import { setFilters } from '@/redux/jobslice.jsx';
 
 const INDUSTRIES = ["Frontend Developer", "Backend Developer", "FullStack Developer", "Digital Analyst", "Cyber Analyst"]
 const SALARY_OPTIONS = ["20LPA", "40LPA", "60LPA", "80LPA", "100LPA"]

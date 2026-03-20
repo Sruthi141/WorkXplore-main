@@ -1,12 +1,15 @@
-/* eslint-disable react/prop-types */
-
 import React, { useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import StatUser from "../components/StatUser";
-import StatRecruiter from "../components/StatRecruiter";
-import Chart from "../components/Chart";
+
+// ✅ FIXED imports (add .jsx)
+import StatUser from "../components/StatUser.jsx";
+import StatRecruiter from "../components/StatRecruiter.jsx";
+import Chart from "../components/Chart.jsx";
+
+// ✅ FIX path + extension
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
+
 import axios from "axios";
-import { ADMIN_API_END_POINT } from "./../utils/constant";
 import { motion } from "framer-motion";
 import {
   Sparkles,

@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import UserChart from "../components/UserChart";
-import TableList from "../components/TableList";
-import { ADMIN_API_END_POINT } from "./../utils/constant";
+import UserChart from "../components/UserChart.jsx";
+import TableList from "../components/TableList.jsx";
+import { ADMIN_API_END_POINT } from "../utils/constant.js";
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Shield, MapPin, Sparkles } from "lucide-react";
 import { toast } from "sonner";

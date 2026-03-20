@@ -1,10 +1,12 @@
 import { useState } from "react";
 // import Navbar from "../common/Navbar";
-import { Button } from "../ui/button";
+
+import { Button } from "../ui/button.jsx";
 import { motion } from "framer-motion";
+
 import axios from "axios";
 import { toast } from "sonner";
-import { USER_API_END_POINT } from "../../utils/constant";
+import { USER_API_END_POINT } from "../../utils/constant.js";
 
 const BACKEND_BASE = USER_API_END_POINT.replace("/api/v1/users", "");
 

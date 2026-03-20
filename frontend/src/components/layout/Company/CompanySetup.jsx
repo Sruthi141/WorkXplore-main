@@ -1,17 +1,20 @@
-
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 // import Navbar from '../../common/Navbar'
-import { Button } from '../../ui/button'
-import { ArrowLeft, Loader2 } from 'lucide-react'
-import { Label } from '../../ui/label'
-import { Input } from '../../ui/input'
-import axios from 'axios'
-import { COMPANY_API_END_POINT } from '../../../utils/constant'
-import { useNavigate, useParams } from 'react-router-dom'
-import { toast } from 'sonner'
-import { useSelector } from 'react-redux'
-import useGetCompanyById from '../../../hooks/useGetCompanyById'
 
+import { Button } from "../../ui/button.jsx";
+import { ArrowLeft, Loader2 } from "lucide-react";
+import { Label } from "../../ui/label.jsx";
+import { Input } from "../../ui/input.jsx";
+
+import axios from "axios";
+import { COMPANY_API_END_POINT } from "../../../utils/constant.js";
+
+import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "sonner";
+import { useSelector } from "react-redux";
+
+// ✅ make sure this matches file exactly
+import useGetCompanyById from "../../../hooks/useGetCompanyById.js";
 const CompanySetup = () => {
     const params = useParams();
     useGetCompanyById(params.id);

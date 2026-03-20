@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
-import { React, useEffect } from "react";
-// import Navbar from "../common/Navbar";
-import Herosection from "../layout/home/HeroPremium";
-import CategoryCatalouge from "../layout/home/CategoryCatalouge";
-import Latestjobs from "../layout/home/Latestjobs";
-import Footer from "../common/Footer";
-import useGetAllJobs from "@/hooks/useGetAllJobs";
-import { setSearchedQuery } from "@/redux/jobslice";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+// import Navbar from "../common/navbar.jsx";
 
-import { useSelector } from "react-redux";
-import RecentJobsPosted from "../layout/home/RecentJobsPosted";
-import CompanyCatalouge from "../layout/home/CompanyCatalouge";
+import Herosection from "../layout/home/HeroPremium.jsx";
+import CategoryCatalouge from "../layout/home/CategoryCatalouge.jsx";
+import Latestjobs from "../layout/home/Latestjobs.jsx";
+import Footer from "../common/Footer.jsx";
 
+import useGetAllJobs from "../../hooks/useGetAllJobs.js";
+import { setSearchedQuery } from "../../redux/jobslice.jsx";
+import { useDispatch, useSelector } from "react-redux";
+
+import RecentJobsPosted from "../layout/home/RecentJobsPosted.jsx";
+import CompanyCatalouge from "../layout/home/CompanyCatalouge.jsx";
 
 function Homepage() {
   useGetAllJobs();

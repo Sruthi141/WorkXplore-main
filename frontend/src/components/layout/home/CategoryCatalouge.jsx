@@ -1,15 +1,23 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../ui/carousel.jsx";
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../ui/carousel';
-import { Button } from '../../ui/button';
+import { Button } from "../../ui/button.jsx";
+
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { setSearchedQuery } from '@/redux/jobSlice';
+import { useDispatch } from "react-redux";
 
-
+// ✅ FIXED HERE
+import { setSearchedQuery } from "@/redux/jobslice.jsx";
 
 const category = [
     "Frontend Developer",
     "Backend Developer",
+    
     "Data Science",
     "Graphic Designer",
     "FullStack Developer"

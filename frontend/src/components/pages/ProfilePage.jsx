@@ -1,14 +1,21 @@
   // import Navbar from "../common/Navbar";
-  import { Avatar, AvatarImage } from "../ui/avatar";
-  import { Button } from "../ui/button";
-  import { Badge } from "../ui/badge";
-  import { Label } from "../ui/label";
-  import { Mail, Contact, Pen } from "lucide-react";
-  import AppliedJobTable from "../layout/profile/Appliedjobs";
-  import { useState } from "react";
-  import Updateprofile from "../layout/profile/Updateprofile";
-  import { useSelector } from "react-redux";
-  import useGetAppliedJobs from "@/hooks/useGetAppliedJobs";
+
+import { Avatar, AvatarImage } from "../ui/avatar.jsx";
+import { Button } from "../ui/button.jsx";
+import { Badge } from "../ui/badge.jsx";
+import { Label } from "../ui/label.jsx";
+
+import { Mail, Contact, Pen } from "lucide-react";
+
+// ✅ fix case
+import AppliedJobTable from "../layout/profile/AppliedJobs.jsx";
+import Updateprofile from "../layout/profile/UpdateProfile.jsx";
+
+import { useState } from "react";
+import { useSelector } from "react-redux";
+
+// ✅ safer path
+import useGetAppliedJobs from "../../hooks/useGetAppliedJobs.js";
 
   function Profile() {
     useGetAppliedJobs();

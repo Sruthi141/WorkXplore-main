@@ -1,5 +1,6 @@
 // import Navbar from "../common/Navbar";
-import { Button } from "../ui/button";
+
+import { Button } from "../ui/button.jsx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 

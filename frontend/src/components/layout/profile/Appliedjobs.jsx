@@ -1,8 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table'
-import { Badge } from '../../ui/badge'
-import { useSelector } from 'react-redux'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '../../ui/table.jsx';
+
+import { Badge } from '../../ui/badge.jsx';
+import { useSelector } from 'react-redux';
 
 const AppliedJobTable = () => {
     

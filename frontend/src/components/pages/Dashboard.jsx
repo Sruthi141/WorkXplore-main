@@ -1,7 +1,7 @@
 
 import { useSelector } from "react-redux";
-import RecruiterDashboard from "../dashboard/RecruiterDaashboard";
-import UserDashboard from "../dashboard/UserDashboard";
+import RecruiterDashboard from "../dashboard/RecruiterDashboard.jsx";
+import UserDashboard from "../dashboard/UserDashboard.jsx";
 
 function Dashboard() {
   const { user } = useSelector((store) => store.auth);

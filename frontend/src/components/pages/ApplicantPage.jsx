@@ -1,12 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 // import Navbar from '../common/Navbar'
-import ApplicantsTable from '../layout/applicants/ApplicantsTable'
-import axios from 'axios';
-import { APPLICATION_API_END_POINT } from '../../utils/constant';
-import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { setAllApplicants } from '../../redux/applicationslice';
 
+import ApplicantsTable from "../layout/applicants/ApplicantsTable.jsx";
+import axios from "axios";
+import { APPLICATION_API_END_POINT } from "../../utils/constant.js";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setAllApplicants } from "../../redux/applicationslice.jsx";
 
 const ApplicantPage = () => {
     const params = useParams();

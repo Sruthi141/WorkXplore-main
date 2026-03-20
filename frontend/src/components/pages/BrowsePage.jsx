@@ -1,11 +1,19 @@
 import { useEffect, useState } from 'react';
 // import Navbar from '../common/Navbar';
-import Job from '../layout/jobs/Jobcard';
+
+import Job from '../layout/jobs/JobCard.jsx';
+
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchedQuery } from '@/redux/jobSlice';
-import useGetAllJobs from '@/hooks/useGetAllJobs';
+
+// ✅ fixed
+import { setSearchedQuery } from '@/redux/jobslice.jsx';
+
+// ✅ safer
+import useGetAllJobs from '../../hooks/useGetAllJobs.js';
+
 import { Search } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '../ui/button.jsx';
+
 
 const Browse = () => {
     useGetAllJobs();

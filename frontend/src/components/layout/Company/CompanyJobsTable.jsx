@@ -6,9 +6,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../ui/table";
-import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
+} from "../../ui/table.jsx";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../../ui/popover.jsx";
+
 import { Edit2, MoreHorizontal } from "lucide-react";
+
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";

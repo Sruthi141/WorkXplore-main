@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Badge } from '../../ui/badge';
-import { Button } from './../../ui/button';
+import { Badge } from '../../ui/badge.jsx';
+import { Button } from '../../ui/button.jsx';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from '../../../utils/constant';
-import { setSingleJob } from '@/redux/jobSlice';
+import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from '../../../utils/constant.js';
+import { setSingleJob } from '@/redux/jobslice.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'sonner';
-import Navbar from '../../common/Navbar';
+import Navbar from '../../common/navbar.jsx';
 
 const JobDescription = () => {
     const { singleJob } = useSelector((store) => store.job);

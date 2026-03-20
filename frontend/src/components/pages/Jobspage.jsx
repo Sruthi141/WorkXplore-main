@@ -1,9 +1,13 @@
-import Filterjobs from "../layout/jobs/Filterjobs";
-import JobListAnimated from "../job/JobListAnimated";
-import { Input } from "../ui/input";
+import Filterjobs from "../layout/jobs/Filterjobs.jsx";
+import JobListAnimated from "../job/JobListAnimated.jsx";
+
+import { Input } from "../ui/input.jsx";
+
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import useGetAllJobs from "@/hooks/useGetAllJobs";
+
+// ✅ safer
+import useGetAllJobs from "../../hooks/useGetAllJobs.js";
 
 const Jobs = () => {
   const dispatch = useDispatch();
