@@ -1,5 +1,5 @@
   // import Navbar from "../common/Navbar";
-  import { Avatar, AvatarImage } from "../ui/Avatar";
+  import { Avatar, AvatarImage } from "../ui/avatar";
   import { Button } from "../ui/button";
   import { Badge } from "../ui/badge";
   import { Label } from "../ui/label";
